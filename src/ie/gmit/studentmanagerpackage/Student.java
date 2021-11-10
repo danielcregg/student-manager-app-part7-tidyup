@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 
 public class Student implements Serializable {
 
+	// Add for serialization
 	private static final long serialVersionUID = 1L;
 	
 	// Instance Variables

@@ -56,7 +56,7 @@ public class StudentManager implements Serializable {
 	public boolean removeStudent(Student studentObject) {
 		return studentList.remove(studentObject);
 	}
-	
+
 	public Student deleteStudentByNumber(int number) {
 		try {
 			return studentList.remove(number - 1);
@@ -72,7 +72,7 @@ public class StudentManager implements Serializable {
 		// Returns the current number of Students in the ArrayList
 		return studentList.size();
 	}
-	
+
 	public String listAllStudnets() {
 		// Create a StringBuilder object
 		StringBuilder sb = new StringBuilder();
@@ -170,11 +170,11 @@ public class StudentManager implements Serializable {
 
 	// Method to de-serialize the Student Manager Object
 	public StudentManager loadStudentManagerObjectFromFile(File studentObjectsFile) {
-		
+
 		FileInputStream fis = null;
 		ObjectInputStream ois = null;
 		StudentManager sm = null;
-		
+
 		try {
 			fis = new FileInputStream(studentObjectsFile);
 			ois = new ObjectInputStream(fis);
@@ -207,10 +207,10 @@ public class StudentManager implements Serializable {
 
 	// Method to serialize the Student Manager Object
 	public void saveStudentManagerObjectToFile(File studentObjectsFile) {
-		
+
 		FileOutputStream fos = null;
 		ObjectOutputStream oos = null;
-		
+
 		try {
 			fos = new FileOutputStream(studentObjectsFile);
 			oos = new ObjectOutputStream(fos);

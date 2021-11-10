@@ -93,6 +93,7 @@ public class Main extends Application {
 				// sm.saveStudentManagerObjectToFile(studentObjectsFile);
 				sm = sm.loadStudentManagerObjectFromFile(studentObjectsFile);
 				if (sm == null) {
+					sm = new StudentManager();
 					taMyOutput.setText("ERROR: DB path " + tfLoadStudentFilePath.getText() + " does not exist\n");
 					taMyOutput.appendText("Please check DB path and try again");
 					tfLoadStudentFilePath.clear();
